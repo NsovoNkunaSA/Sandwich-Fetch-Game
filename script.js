@@ -1,23 +1,24 @@
 const input = document.getElementById("ingredientInput");
-const addButton = document.getElementById("addButton");
 const makeButton = document.getElementById("makeButton");
+const finishButton = document.getElementById("finishButton");
 
 const message = document.getElementById("message");
 const sandwichList = document.getElementById("sandwichList");
 
 let sandwich = [];
 
+makeButton.addEventListener("click", () => {
 
-addButton.addEventListener("click", () => {
-
-    const ingredient = input.value.toLowerCase().trim();
+    const ingredient = input.value
+        .toLowerCase()
+        .trim();
 
     if (ingredient === "") {
-        message.textContent = "Please enter an ingredient.";
+        message.textContent = " Enter an ingredient.";
         return;
     }
 
-
+    // FETCH THE INGREDIENTS
     fetch("ingredients.json")
 
         .then((response) => {
@@ -27,30 +28,29 @@ addButton.addEventListener("click", () => {
             }
 
             return response.json();
-
         })
 
         .then((data) => {
 
+            // CHECK IF INGREDIENT EXISTS
             if (!data.ingredients.includes(ingredient)) {
 
                 throw new Error(
                     `${ingredient} is not available!`
                 );
-
             }
 
-
+            // INGREDIENT EXISTS
             sandwich.push(ingredient);
-
-            message.textContent =
-                ` ${ingredient} added!`;
 
             const item = document.createElement("li");
 
             item.textContent = ingredient;
 
             sandwichList.appendChild(item);
+
+            message.textContent =
+                ` ${ingredient} added!`;
 
             input.value = "";
 
@@ -66,18 +66,17 @@ addButton.addEventListener("click", () => {
 });
 
 
-makeButton.addEventListener("click", () => {
+finishButton.addEventListener("click", () => {
 
     if (sandwich.length === 0) {
 
         message.textContent =
-            " Your sandwich is empty!";
+            " Your sandwich has no ingredients.";
 
         return;
     }
 
-
     message.textContent =
-        ` Sandwich ready! ${sandwich.join(", ")}`;
+        ` Sandwich complete: ${sandwich.join(", ")}`;
 
 });
