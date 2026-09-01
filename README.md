@@ -6,6 +6,7 @@ A small JavaScript project for practicing **Promises, fetch(), `.then()`, and `.
 ## How It Works
 
 The app fetches sandwich ingredients from a local `ingredients.json` file and uses them to create a sandwich.
+If the ingredient is not available, it throws an error indicating ingredient not avalable.
 
 ## Technologies
 
