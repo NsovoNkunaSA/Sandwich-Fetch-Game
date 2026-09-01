@@ -18,7 +18,6 @@ makeButton.addEventListener("click", () => {
         return;
     }
 
-    // FETCH THE INGREDIENTS
     fetch("ingredients.json")
 
         .then((response) => {
@@ -32,7 +31,7 @@ makeButton.addEventListener("click", () => {
 
         .then((data) => {
 
-            // CHECK IF INGREDIENT EXISTS
+            
             if (!data.ingredients.includes(ingredient)) {
 
                 throw new Error(
@@ -40,7 +39,7 @@ makeButton.addEventListener("click", () => {
                 );
             }
 
-            // INGREDIENT EXISTS
+            
             sandwich.push(ingredient);
 
             const item = document.createElement("li");
