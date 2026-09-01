@@ -1,0 +1,27 @@
+{
+    "bread": [
+        "White Bread",
+        "Brown Bread",
+        "Whole Wheat Bread"
+    ],
+    "meat": [
+        "Polony",
+        "Ham",
+        "Chicken"
+    ],
+    "cheese": [
+        "Cheddar",
+        "Gouda",
+        "Mozzarella"
+    ],
+    "sauce": [
+        "Mayonnaise",
+        "Tomato Sauce",
+        "Mustard"
+    ],
+    "vegetables": [
+        "Lettuce",
+        "Tomato",
+        "Cucumber"
+    ]
+}
