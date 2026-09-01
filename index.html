@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Make My Sandwich</title>
+    <title>Sandwich Game</title>
 </head>
 
 <body>
 
-    <h1> Make My Sandwich</h1>
+    <h1> :) Make Your Sandwich</h1>
 
-    <button id="makeSandwich">
+    <input
+        id="ingredientInput"
+        type="text"
+        placeholder="Enter ingredient"
+    >
+
+    <button id="addButton">
+        Add Ingredient
+    </button>
+
+    <button id="makeButton">
         Make Sandwich
     </button>
 
-    <div id="sandwich"></div>
+    <p id="message"></p>
+
+    <ul id="sandwichList"></ul>
 
     <script src="script.js"></script>
 
