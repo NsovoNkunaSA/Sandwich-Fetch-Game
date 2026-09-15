@@ -4,6 +4,7 @@ const finishButton = document.getElementById("finishButton");
 
 const message = document.getElementById("message");
 const sandwichList = document.getElementById("sandwichList");
+const restartButton = document.getElementById("restartButton");
 
 let sandwich = [];
 
@@ -79,3 +80,11 @@ finishButton.addEventListener("click", () => {
         ` Sandwich complete: ${sandwich.join(", ")}`;
 
 });
+
+restartButton.addEventListener("click",()=>{
+    if(sandwich.length !== 0){
+        sandwich.length = 0
+    }
+    else{
+        return;
+})
