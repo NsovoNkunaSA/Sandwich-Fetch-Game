@@ -16,6 +16,7 @@ makeButton.addEventListener("click", () => {
 
     if (ingredient === "") {
         message.textContent = " Enter an ingredient.";
+        
         return;
     }
 
@@ -78,6 +79,7 @@ finishButton.addEventListener("click", () => {
 
     message.textContent =
         ` Sandwich complete: ${sandwich.join(", ")}`;
+    
 
 });
 
@@ -85,6 +87,6 @@ restartButton.addEventListener("click",()=>{
     if(sandwich.length !== 0){
         sandwich.length = 0
     }
-    else{
+    else {
         return;
 })
