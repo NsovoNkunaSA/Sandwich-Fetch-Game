@@ -1,10 +1,8 @@
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 
 body {
     font-family: Arial, sans-serif;
@@ -14,33 +12,102 @@ body {
     min-height: 100vh;
 
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 
-    padding: 40px 20px;
+    padding: 30px;
+}
+
+.game {
+    width: 100%;
+    max-width: 600px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
 }
 
 h1 {
     color: #d97706;
-    margin-bottom: 25px;
-    font-size: 36px;
+
+    font-size: 38px;
+
+    margin-bottom: 10px;
 }
 
+.intro {
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+.challenge {
+    background: #fef3c7;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    margin-bottom: 25px;
+}
+
+.challenge h2 {
+    color: #92400e;
+
+    margin-bottom: 10px;
+}
+
+#challengeMessage {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #78350f;
+}
+
+.ingredient-section {
+    margin-bottom: 15px;
+}
+
+.ingredient-section label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-weight: bold;
+}
+
+.input-area {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+}
 
 #ingredientInput {
     width: 300px;
+
     padding: 12px 15px;
 
     border: 2px solid #f59e0b;
+
     border-radius: 8px;
 
     font-size: 16px;
+
     outline: none;
 }
 
-
 #ingredientInput:focus {
     border-color: #d97706;
+
     box-shadow: 0 0 5px rgba(217, 119, 6, 0.3);
 }
 
@@ -48,9 +115,11 @@ button {
     padding: 12px 20px;
 
     border: none;
+
     border-radius: 8px;
 
     font-size: 16px;
+
     font-weight: bold;
 
     cursor: pointer;
@@ -60,45 +129,64 @@ button {
 
 #makeButton {
     background-color: #f59e0b;
+
     color: white;
-
-    margin-left: 8px;
 }
-
 
 #makeButton:hover {
     background-color: #d97706;
-    transform: translateY(-2px);
+}
+
+#finishButton {
+    background-color: #16a34a;
+
+    color: white;
+}
+
+#finishButton:hover {
+    background-color: #15803d;
+}
+
+#restartButton {
+    background-color: #64748b;
+
+    color: white;
+}
+
+#restartButton:hover {
+    background-color: #475569;
 }
 
 #message {
-    margin-top: 20px;
+    min-height: 25px;
 
-    font-size: 18px;
+    margin: 15px 0;
+
     font-weight: bold;
 
-    min-height: 25px;
+    color: #92400e;
 }
 
-h2 {
-    margin-top: 30px;
-    margin-bottom: 15px;
+.sandwich {
+    margin-top: 20px;
+}
 
+.sandwich h2 {
     color: #92400e;
+
+    margin-bottom: 15px;
 }
 
 #sandwichList {
     list-style: none;
 
-    width: 350px;
+    min-height: 50px;
 
-    background: white;
+    padding: 10px;
+
+    background: #f8fafc;
 
     border-radius: 12px;
-
-    padding: 15px;
-
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 #sandwichList li {
@@ -113,19 +201,55 @@ h2 {
     color: #78350f;
 
     font-weight: bold;
-
-    text-align: center;
 }
 
+#progress {
+    margin-top: 20px;
 
-#finishButton {
-    margin-top: 25px;
+    font-weight: bold;
 
-    background-color: #16a34a;
-    color: white;
+    color: #555;
 }
 
-#finishButton:hover {
-    background-color: #15803d;
-    transform: translateY(-2px);
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+#score {
+    margin-top: 20px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #166534;
+}
+
+@media (max-width: 600px) {
+
+    .game {
+        padding: 20px;
+    }
+
+    .input-area {
+        flex-direction: column;
+    }
+
+    #ingredientInput {
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
 }
