@@ -1,9 +1,16 @@
 {
     "ingredients": [
         "bread",
-        "polony",
+        "chicken",
+        "beef",
+        "tuna",
         "cheese",
         "lettuce",
-        "mayo"
+        "tomato",
+        "onion",
+        "cucumber",
+        "avocado",
+        "egg",
+        "ham"
     ]
 }
