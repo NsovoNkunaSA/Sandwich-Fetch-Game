@@ -1,40 +1,90 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Sandwich Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <title>Sandwich Challenge</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <h1> :) Make Your Sandwich</h1>
+    <main class="game">
 
-    <input
-        id="ingredientInput"
-        type="text"
-        placeholder="Enter ingredient"
-    >
+        <h1>Sandwich Challenge</h1>
 
-    <button id="makeButton">
-        Add Ingredient
-    </button>
+        <p class="intro">
+            Build the sandwich requested by the chef.
+        </p>
 
-    <p id="message"></p>
+        <section class="challenge">
 
-    <h2>Your Sandwich</h2>
+            <h2>Challenge</h2>
 
-    <ul id="sandwichList"></ul>
+            <p id="challengeMessage">
+                Loading challenge...
+            </p>
 
-    <button id="finishButton">
-        Finish Sandwich
-    </button>
-    <button id="restartButton">
-        Restart
-    </button>
+        </section>
+
+        <section class="ingredient-section">
+
+            <label for="ingredientInput">
+                Enter an ingredient
+            </label>
+
+            <div class="input-area">
+
+                <input
+                    type="text"
+                    id="ingredientInput"
+                    placeholder="Enter ingredient"
+                >
+
+                <button id="makeButton">
+                    Add
+                </button>
+
+            </div>
+
+        </section>
+
+        <p id="message"></p>
+
+        <section class="sandwich">
+
+            <h2>Your Sandwich</h2>
+
+            <ul id="sandwichList"></ul>
+
+        </section>
+
+        <p id="progress">
+            0 ingredients added
+        </p>
+
+        <section class="buttons">
+
+            <button id="finishButton">
+                Finish Sandwich
+            </button>
+
+            <button id="restartButton">
+                Restart
+            </button>
+
+        </section>
+
+        <section id="scoreSection">
+
+            <p id="score"></p>
+
+        </section>
+
+    </main>
 
     <script src="script.js"></script>
 
